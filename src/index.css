@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --dark-bg-color: hsl(207, 26%, 17%);
+  --article-color: hsl(209, 23%, 22%);
+  --text-color: hsl(0, 0%, 100%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+article {
+  margin-bottom: 30px;
+  max-width: 20em;
+  width: 15em;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,.2);
+  color: #111517;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-info img{
+  max-height: 8em;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+.details {
+  padding: 1.5em;
+}
+
+.details .population {
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+.details .population span {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  box-shadow: 2px 0 8px rgba(0,0,0,.2);
+  background-color: #fff;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 800;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 30px 0 30px;
+  padding: 20px 0;
+}
+
+#search {
+ padding: 0.4em 1.2em ;
+ width: 100%;
+ border-radius: 2px;
+ border: none;
+ box-shadow: 0 0 3px rgba(0,0,0,.2);
+}
+
+@media (min-width: 640px) {
+  article {
+    width: 600px;
+  }
+
+  .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4em;
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 30px 0 30px;
+    padding: 20px 0;
+  }
 }
